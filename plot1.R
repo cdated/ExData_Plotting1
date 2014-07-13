@@ -11,7 +11,7 @@ if (!file.exists(data_file))
   }
   
   print(paste("Unzipping ", zip_file))
-  unzip("./household_power_consumption.zip")
+  unzip(zip_file)
 }
 
 print("Reading power comsumption data into R")
