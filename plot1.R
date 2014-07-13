@@ -21,7 +21,7 @@ column_names <- names(read.table(data_file, header=TRUE,sep=";",nrows=1))
 colnames(dat) <- column_names
 
 print("Plotting graph")
-png("./plot1.png",  width = 480, height = 480, units = "px")
 hist(dat$Global_active_power, col="red",
      xlab="Global Active Power (kilowatts)", main="Global Active Power")
+dev.copy(png, file = "plot2.png", width = 480, height = 480, units = "px")
 dev.off()
